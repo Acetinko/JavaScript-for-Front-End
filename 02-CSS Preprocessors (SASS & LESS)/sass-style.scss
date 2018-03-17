@@ -1,0 +1,46 @@
+$margin: 25px;
+$size-increment: $margin * 4;
+$initial-size: $size-increment * 2;
+$red-background: red;
+$yellow-background: yellow;
+$green-background: greenyellow;
+$blue-background: blue;
+$brown-background: brown;
+
+@mixin circle-styles {
+    color: #ffffff;
+    border-radius: 50%;
+    text-align: center;
+    margin: $margin auto;
+}
+
+div {
+    @include circle-styles;
+    width: $initial-size + $size-increment * 5;
+    height: $initial-size + $size-increment * 5;
+    background: $brown-background;
+    div {
+        width: $initial-size + $size-increment * 4;
+        height: $initial-size + $size-increment * 4;
+        background: $blue-background;
+        div {
+            width: $initial-size + $size-increment * 3;
+            height: $initial-size + $size-increment * 3;
+            background: $green-background;
+            div {
+                width: $initial-size + $size-increment * 2;
+                height: $initial-size + $size-increment * 2;
+                background: $yellow-background;
+                div {
+                    background: $red-background;
+                    width: $initial-size + $size-increment * 1;
+                    height: $initial-size + $size-increment * 1;
+                    .inner {
+                        display: block;
+                        padding-top: ($initial-size + $size-increment) / 2;
+                    }
+                }
+            }
+        }
+    }
+}
