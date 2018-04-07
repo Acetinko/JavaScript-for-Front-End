@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Lato, sans-serif;
+}
+
+body ul {
+  display: flex;
+  justify-content: flex-end;
+}
+
+body ul li {
+  list-style: none;
+  margin-left: 20px;
+}
+
+body ul li a,
+body ul li a:hover {
+  text-decoration: none;
+}
+
+header.header-primary {
+  background: linear-gradient(rgba(20, 20, 20, 0.3), rgba(20, 20, 20, 0.3)), url(../images/background.jpg) no-repeat;
+  /**/
+  background-size: cover;
+  color: #ffffff;
+  text-align: center;
+  padding-bottom: 300px;
+}
+
+header.header-primary .nav-container {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 20px;
+}
+
+header.header-primary .nav-container a {
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 0.9em;
+  text-transform: uppercase;
+}
+
+header.header-primary .header-title {
+  font-size: 40px;
+  letter-spacing: 3px;
+  margin-top: 200px;
+  margin-bottom: 40px;
+}
+
+main {
+  text-align: center;
+}
+
+main section {
+  padding: 40px 0;
+}
+
+main section .section-header .section-title {
+  color: #000000;
+  font-weight: bold;
+}
+
+main section .section-header .section-subtitle {
+  color: #888888;
+}
+
+main section .section-content {
+  width: 90%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  padding: 0;
+  margin: auto;
+}
+
+main section .section-content article {
+  width: 30%;
+  background: #ffffff;
+  margin: 20px 10px;
+}
+
+main section.best-offers {
+  background: #f5f5f5;
+}
+
+main section.best-offers article {
+  border-radius: 5px;
+}
+
+main section.best-offers article img {
+  width: 100%;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+main section.best-offers article .offer-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+main section.best-offers article .offer-details .offer-destination {
+  font-weight: 900;
+  font-size: 1em;
+  margin: 0;
+}
+
+main section.best-offers article .offer-details .offer-price {
+  font-size: 1.1em;
+  margin: 0;
+}
+
+main section.clients-testimonials {
+  background: #ffffff;
+}
+
+main section.clients-testimonials article img {
+  display: block;
+  width: 50%;
+  border-radius: 50%;
+  box-shadow: 0px 0px 5px 10px whitesmoke;
+  margin: 20px auto;
+}
+
+main section.clients-testimonials article .client-name {
+  font-weight: 900;
+  font-size: 1em;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  padding-top: 30px;
+  padding-bottom: 20px;
+}
+
+main section.clients-testimonials article .client-feedback {
+  color: #aaaaaa;
+  font-style: italic;
+  font-size: 0.8em;
+}
+
+footer {
+  display: flex;
+  justify-content: space-around;
+  color: #aaaaaa;
+  font-size: 0.7em;
+  padding: 20px;
+}
+
+footer p,
+footer ul {
+  margin: 0;
+}
+
+footer a {
+  color: #aaaaaa;
+}
+/*# sourceMappingURL=dream-vacation.css.map */

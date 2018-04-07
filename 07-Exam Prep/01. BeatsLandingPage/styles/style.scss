@@ -1,0 +1,105 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,900);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+}
+
+header.header-primary {
+    ul {
+        display: flex;
+        justify-content: space-around;
+        padding: 20px;
+        li {
+            list-style: none;
+            a {
+                color: #ababab;
+                font-weight: 900;
+                text-transform: uppercase;
+                border-bottom: 3px solid transparent;
+                &:hover {
+                    color: #5a5a5a;
+                    text-decoration: none;
+                    border-bottom: 3px solid #ababab;
+                }
+            }
+        }
+    }
+}
+
+.product {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    color: #5a5a5a;
+    padding: 40px;
+    margin: 0 auto;
+    .button {
+        display: block;
+        width: 200px;
+        color: #ffffff;
+        background-color: #dc0202;
+        border-radius: 25px;
+        border: none;
+        text-align: center;
+        text-transform: uppercase;
+        padding: 10px 0;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+    .product-image {
+        width: 50%;
+        img {
+            width: 100%;
+        }
+    }
+    .product-details {
+        width: 50%;
+        padding: 30px;
+        .product-name {
+            font-weight: 900;
+            font-size: 2em;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 20px;
+        }
+    }
+    &.right {
+        background: #fbfcff;
+        .product-name {
+            color: #0d0d0f;
+            font-size: 2.5em;
+        }
+        .product-features {
+            text-align: center;
+            text-transform: uppercase;
+            padding-bottom: 20px;
+            span {
+                margin-left: 5px;
+            }
+            strong {
+                color: #0d0d0f;
+                font-weight: 900;
+            }
+        }
+        .product-offer {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            padding-top: 20px;
+            .product-price {
+                color: #0d0d0f;
+                font-size: 2em;
+                font-weight: 900;
+                padding-right: 20px;
+                margin: 0;
+            }
+        }
+    }
+}
