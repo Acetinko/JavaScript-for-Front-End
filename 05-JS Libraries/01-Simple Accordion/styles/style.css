@@ -1,0 +1,35 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    width: 50%;
+    margin: auto;
+    color: #733838;
+}
+
+#accordion h3 {
+    margin: 0.5em 0;
+}
+
+#accordion > div > p {
+    color: #733838;
+    margin-bottom: 0;
+}
+
+.ui-accordion-header {
+    background-color: #733838;
+    border: none;
+}
+
+.ui-state-default,
+.ui-accordion-content {
+    color: #ffffff;
+    border: none;
+    outline: none;
+}
+
+.ui-accordion .ui-accordion-content {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}

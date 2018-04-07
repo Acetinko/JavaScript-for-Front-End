@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css?family=Lato");
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: "Lato", sans-serif;
+    font-size: 16px;
+}
+
+.slider {
+    width: 80%;
+    margin: 100px auto;
+}
+
+.slick-slide {
+    margin: 0px 20px;
+}
+
+.slick-slide img {
+    width: 50%;
+    display: block;
+    margin: 40px auto;
+}
+
+.slick-prev:before,
+.slick-next:before {
+    font-family: "FontAwesome";
+    font-size: 48px;
+    font-weight: bold;
+    color: #fe0000;
+}
+
+.slick-prev:before {
+    content: "\f053";
+}
+
+.slick-next:before {
+    content: "\f054";
+}
+
+.slick-slide {
+    transition: all ease-in-out 0.3s;
+}
+
+article {
+    text-align: center;
+    border: 1px solid #c3ccd4;
+    border-bottom: 5px solid #c3ccd4;
+    border-radius: 5px;
+    margin: auto;
+}
+
+article h4,
+article div {
+    margin: 20px;
+}
+
+article h4 {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+article p {
+    color: #c3ccd4;
+}
+
+i {
+    font-family: FontAwesome;
+}
