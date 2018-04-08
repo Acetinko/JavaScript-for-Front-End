@@ -1,49 +1,44 @@
 function renderAllElementsInHTML() {
+    // Title
     $("<h1>")
         .text("Choose Your Destiny")
         .prependTo($("#elementsContainer"));
 
     let fragment = document.createDocumentFragment();
+
+    // Air, Fire
     $("<div>")
         .addClass("containers")
         .append(
             $("<div>")
                 .attr("id", "air")
-                .addClass("first clickable")
-        )
-        .append(
+                .addClass("first clickable"),
             $("<div>")
                 .attr("id", "fire")
                 .addClass("second clickable")
         )
         .appendTo(fragment);
+
+    // Water, Earth
     $("<div>")
         .addClass("containers")
         .append(
             $("<div>")
                 .attr("id", "water")
-                .addClass("third clickable")
-        )
-        .append(
+                .addClass("third clickable"),
             $("<div>")
                 .attr("id", "earth")
                 .addClass("fourth clickable")
         )
         .appendTo(fragment);
 
+    // Display container
     $(".container").append(fragment);
-
-    addEvents();
-
-    // display / hide containers
     $("#elementsContainer").removeClass("no-display");
-    $("#elementInfo").addClass("no-display");
+    addEvents();
 }
 
 function renderSingleElementInHTML(element) {
-    // clear container
-    clearElementInfo();
-
     // top
     $("#elementInfoTitle")
         .text(element)
@@ -53,10 +48,7 @@ function renderSingleElementInHTML(element) {
         $("<button>")
             .attr("id", "backToElements")
             .text("Back to Elements")
-            .click(function() {
-                $("#elementsContainer").removeClass("no-display");
-                $("#elementInfo").addClass("no-display");
-            })
+            .click(() => backToAllElements())
     );
 
     // left
@@ -65,66 +57,58 @@ function renderSingleElementInHTML(element) {
         .append(
             $("<input>")
                 .addClass("radio-button checked")
-                .attr("name", "selector")
-                .attr("type", "radio")
-                .attr("value", "Archangel")
+                .attr({
+                    name: "selector",
+                    type: "radio",
+                    value: "Archangel"
+                }),
+            $("<label>").text("Archangel")
         )
-        .append($("<label>").text("Archangel"))
         .appendTo(fragment);
+
     $("<li>")
         .append(
             $("<input>")
                 .addClass("radio-button checked")
-                .attr("name", "selector")
-                .attr("type", "radio")
-                .attr("value", "Elemental")
+                .attr({
+                    name: "selector",
+                    type: "radio",
+                    value: "Elemental"
+                }),
+            $("<label>").text("Elemental")
         )
-        .append($("<label>").text("Elemental"))
         .appendTo(fragment);
+
     $(".creatures").append(fragment);
 
     // center
     $(".center-after-click").append(
-        $("<img>")
-            .attr("id", "creature-image")
-            .attr("src", "images/archangel.jpg")
-            .attr("alt", "archangel")
+        $("<img>").attr({
+            id: "creature-image",
+            src: "images/archangel.jpg",
+            alt: "archangel"
+        })
     );
 
     // right
-    $("#right-after-click")
-        .append(
-            $("<p>")
-                .attr("id", "creature-name")
-                .text("Archangel")
-        )
-        .append(
-            $("<p>")
-                .attr("id", "creature-power")
-                .text("Power:2000")
-        )
-        .append(
-            $("<p>")
-                .attr("id", "creature-ultimate")
-                .text("Ultimate: Wind Justice")
-        )
-        .append(
-            $("<p>")
-                .attr("id", "creature-region")
-                .text("Region: Heaven’s Kingdom")
-        );
+    $("#right-after-click").append(
+        $("<p>")
+            .attr("id", "creature-name")
+            .text("Archangel"),
+        $("<p>")
+            .attr("id", "creature-power")
+            .text("Power:2000"),
+        $("<p>")
+            .attr("id", "creature-ultimate")
+            .text("Ultimate: Wind Justice"),
+        $("<p>")
+            .attr("id", "creature-region")
+            .text("Region: Heaven’s Kingdom")
+    );
 
-    // display / hide containers
+    // Toggle containers
     $("#elementsContainer").addClass("no-display");
     $("#elementInfo").removeClass("no-display");
-}
-
-function clearElementInfo() {
-    $("#elementInfoTitle").empty();
-    $(".back-button").empty();
-    $(".creatures").empty();
-    $(".center-after-click").empty();
-    $("#right-after-click").empty();
 }
 
 function addEvents() {
@@ -132,9 +116,16 @@ function addEvents() {
     $("#fire").click(() => renderSingleElementInHTML("fire"));
     $("#water").click(() => renderSingleElementInHTML("water"));
     $("#earth").click(() => renderSingleElementInHTML("earth"));
+}
 
-    $("#backToElements").click(function() {
-        $("#elementsContainer").removeClass("no-display");
-        $("#elementInfo").addClass("no-display");
-    });
+function backToAllElements() {
+    $("#elementsContainer").removeClass("no-display");
+    $("#elementInfo").addClass("no-display");
+
+    // Empty Element Info
+    $("#elementInfoTitle").empty();
+    $(".back-button").empty();
+    $(".creatures").empty();
+    $(".center-after-click").empty();
+    $("#right-after-click").empty();
 }

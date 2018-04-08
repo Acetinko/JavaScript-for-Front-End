@@ -10,7 +10,10 @@ function shopping(input) {
     let milkQty = tokens[2];
     let orangesQty = Math.floor(chocolatesQty * (1 - orangeQtyReduction));
 
-    let cost = chocolatePrice * chocolatesQty + milkPrice * milkQty + orangePrice * orangesQty;
+    let cost =
+        chocolatePrice * chocolatesQty +
+        milkPrice * milkQty +
+        orangePrice * orangesQty;
     let remainingCash = budget - cost;
 
     console.log(
