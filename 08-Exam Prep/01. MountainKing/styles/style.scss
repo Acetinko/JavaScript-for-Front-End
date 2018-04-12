@@ -1,0 +1,244 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900");
+@mixin display-flex-between {
+    display: flex;
+    justify-content: space-between;
+}
+@mixin display-flex-around {
+    display: flex;
+    justify-content: space-around;
+}
+@mixin display-flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin button {
+    width: 120px;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 25px;
+    padding: 15px 25px;
+}
+@mixin icon-circled {
+    font-family: "FontAwesome";
+    border-radius: 50%;
+    text-align: center;
+    align-items: stretch;
+}
+@mixin article-icon {
+    @include icon-circled();
+    @include color-pumpkin();
+    font-size: 3em;
+    border: 4px solid;
+    padding: 30px;
+}
+@mixin social-icon {
+    @include icon-circled();
+    font-size: 2em;
+    border: 1px solid;
+    padding: 10px 12px;
+}
+$color-lavender: #393368;
+$color-pink: #f42257;
+$color-orange: #c17f3f;
+@mixin color-pumpkin {
+    color: $color-orange; // text & border color
+}
+@mixin color-blue {
+    color: #0000ff;
+}
+@mixin color-green {
+    color: #00bfff;
+}
+@mixin color-purple {
+    color: #8338b9;
+}
+@mixin text-shadow-white {
+    text-shadow: 1px 1px 5px #ffffff;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Lato, sans-serif;
+}
+
+header {
+    background: url(../img/background-header.jpg) no-repeat center;
+    background-size: cover;
+    padding: 40px;
+    .logo-container {
+        img {
+            width: 20%;
+        }
+    }
+    .header-content-container {
+        width: 70%;
+        text-align: center;
+        padding: 50px;
+        margin: auto;
+        .header-into {
+            color: #2e2a2a;
+            font-size: 2em;
+            letter-spacing: 3px;
+            @include text-shadow-white();
+        }
+        .header-title {
+            font-size: 5em;
+            font-weight: bold;
+            letter-spacing: 3px;
+            @include text-shadow-white();
+            padding-bottom: 40px;
+        }
+        .header-description {
+            color: #2e2a2a;
+            font-size: 1.5em;
+            font-weight: bold;
+            font-style: italic;
+            @include text-shadow-white();
+            // color: rgba(20, 20, 20, 0.7);
+        }
+        .header-buttons {
+            margin: 80px auto;
+            .button {
+                @include button();
+                margin: 10px;
+                &.lavender {
+                    background-color: $color-lavender;
+                }
+                &.pink {
+                    background-color: $color-pink;
+                }
+            }
+        }
+    }
+}
+
+.articles-container {
+    width: 80%;
+    @include display-flex-between();
+    padding: 40px 0;
+    margin: auto;
+    .article {
+        width: 30%;
+        text-align: center;
+        i.fa {
+            @include article-icon();
+            &.fa-pencil {
+                padding: 30px 35px;
+            }
+            &.fa-usd {
+                padding: 30px 43px;
+            }
+        }
+        .article-title {
+            font-size: 1.8em;
+            font-weight: 900;
+            font-style: italic;
+            text-shadow: 1px 1px 5px grey;
+            padding: 20px 0;
+        }
+        .article-description {
+            color: grey;
+            padding: 30px 0;
+        }
+    }
+}
+
+.clients-container {
+    background: url(../img/moon.jpg) no-repeat;
+    background-size: cover;
+    .clients-content {
+        height: 100%;
+        width: 40%;
+        min-width: 550px;
+        max-width: 600px;
+        background: #28323d;
+        opacity: 0.8;
+        color: white;
+        border: 4px solid $color-orange;
+        text-align: center;
+        padding: 30px;
+        margin-left: 150px;
+        .clients-title,
+        .clients-subtitle {
+            margin: 50px;
+            font-style: italic;
+        }
+        .clients-title {
+            font-size: 1.5em;
+            font-weight: 900;
+        }
+        .clients-subtitle {
+            font-size: smaller;
+            font-weight: 400;
+        }
+        .clients-description {
+            margin: 50px auto;
+        }
+        .moons-container {
+            @include display-flex-around;
+            margin: 50px auto;
+            a {
+                text-decoration: none;
+            }
+            .moon {
+                @include display-flex-center();
+                color: #2e3841;
+                font-weight: 900;
+                width: 200px;
+                height: 200px;
+                border-radius: 50%;
+                background: linear-gradient(
+                    to right,
+                    rgba(255, 125, 3, 1),
+                    rgba(255, 225, 89, 1)
+                );
+                box-shadow: 0px 0px 5px 15px #2e3841;
+                // border: 15px solid #2e3841;
+            }
+        }
+    }
+}
+
+footer {
+    @include display-flex-between();
+    align-items: center;
+    background-color: #04040e;
+    color: white;
+    padding: 20px;
+    p > a {
+        text-decoration: none;
+        strong {
+            @include color-pumpkin();
+            text-transform: uppercase;
+        }
+    }
+    ul {
+        @include display-flex-between();
+        li {
+            list-style: none;
+            a {
+                margin-left: 5px;
+                i.fa {
+                    @include social-icon();
+                    &.fa-facebook {
+                        @include color-blue();
+                        padding: 11px 20px;
+                    }
+                    &.fa-twitter {
+                        @include color-green();
+                    }
+                    &.fa-instagram {
+                        @include color-purple();
+                    }
+                }
+            }
+        }
+    }
+}

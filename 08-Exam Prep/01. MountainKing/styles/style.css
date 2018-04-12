@@ -1,0 +1,235 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Lato, sans-serif;
+}
+
+header {
+  background: url(../img/background-header.jpg) no-repeat center;
+  background-size: cover;
+  padding: 40px;
+}
+
+header .logo-container img {
+  width: 20%;
+}
+
+header .header-content-container {
+  width: 70%;
+  text-align: center;
+  padding: 50px;
+  margin: auto;
+}
+
+header .header-content-container .header-into {
+  color: #2e2a2a;
+  font-size: 2em;
+  letter-spacing: 3px;
+  text-shadow: 1px 1px 5px #ffffff;
+}
+
+header .header-content-container .header-title {
+  font-size: 5em;
+  font-weight: bold;
+  letter-spacing: 3px;
+  text-shadow: 1px 1px 5px #ffffff;
+  padding-bottom: 40px;
+}
+
+header .header-content-container .header-description {
+  color: #2e2a2a;
+  font-size: 1.5em;
+  font-weight: bold;
+  font-style: italic;
+  text-shadow: 1px 1px 5px #ffffff;
+}
+
+header .header-content-container .header-buttons {
+  margin: 80px auto;
+}
+
+header .header-content-container .header-buttons .button {
+  width: 120px;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 25px;
+  padding: 15px 25px;
+  margin: 10px;
+}
+
+header .header-content-container .header-buttons .button.lavender {
+  background-color: #393368;
+}
+
+header .header-content-container .header-buttons .button.pink {
+  background-color: #f42257;
+}
+
+.articles-container {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 0;
+  margin: auto;
+}
+
+.articles-container .article {
+  width: 30%;
+  text-align: center;
+}
+
+.articles-container .article i.fa {
+  font-family: "FontAwesome";
+  border-radius: 50%;
+  text-align: center;
+  align-items: stretch;
+  color: #c17f3f;
+  font-size: 3em;
+  border: 4px solid;
+  padding: 30px;
+}
+
+.articles-container .article i.fa.fa-pencil {
+  padding: 30px 35px;
+}
+
+.articles-container .article i.fa.fa-usd {
+  padding: 30px 43px;
+}
+
+.articles-container .article .article-title {
+  font-size: 1.8em;
+  font-weight: 900;
+  font-style: italic;
+  text-shadow: 1px 1px 5px grey;
+  padding: 20px 0;
+}
+
+.articles-container .article .article-description {
+  color: grey;
+  padding: 30px 0;
+}
+
+.clients-container {
+  background: url(../img/moon.jpg) no-repeat;
+  background-size: cover;
+}
+
+.clients-container .clients-content {
+  height: 100%;
+  width: 40%;
+  min-width: 550px;
+  max-width: 600px;
+  background: #28323d;
+  opacity: 0.8;
+  color: white;
+  border: 4px solid #c17f3f;
+  text-align: center;
+  padding: 30px;
+  margin-left: 150px;
+}
+
+.clients-container .clients-content .clients-title,
+.clients-container .clients-content .clients-subtitle {
+  margin: 50px;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.clients-container .clients-content .clients-title {
+  font-size: 1.5em;
+  font-weight: 900;
+}
+
+.clients-container .clients-content .clients-subtitle {
+  font-size: smaller;
+  font-weight: 400;
+}
+
+.clients-container .clients-content .clients-description {
+  margin: 50px auto;
+}
+
+.clients-container .clients-content .moons-container {
+  display: flex;
+  justify-content: space-around;
+  margin: 50px auto;
+}
+
+.clients-container .clients-content .moons-container a {
+  text-decoration: none;
+}
+
+.clients-container .clients-content .moons-container .moon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #2e3841;
+  font-weight: 900;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: linear-gradient(to right, #ff7d03, #ffe159);
+  box-shadow: 0px 0px 5px 15px #2e3841;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #04040e;
+  color: white;
+  padding: 20px;
+}
+
+footer p > a {
+  text-decoration: none;
+}
+
+footer p > a strong {
+  color: #c17f3f;
+  text-transform: uppercase;
+}
+
+footer ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+footer ul li {
+  list-style: none;
+}
+
+footer ul li a {
+  margin-left: 5px;
+}
+
+footer ul li a i.fa {
+  font-family: "FontAwesome";
+  border-radius: 50%;
+  text-align: center;
+  align-items: stretch;
+  font-size: 2em;
+  border: 1px solid;
+  padding: 10px 12px;
+}
+
+footer ul li a i.fa.fa-facebook {
+  color: #0000ff;
+  padding: 11px 20px;
+}
+
+footer ul li a i.fa.fa-twitter {
+  color: #00bfff;
+}
+
+footer ul li a i.fa.fa-instagram {
+  color: #8338b9;
+}
+/*# sourceMappingURL=style.css.map */
