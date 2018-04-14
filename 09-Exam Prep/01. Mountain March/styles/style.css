@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Lato, sans-serif;
+}
+
+main {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+.image-container {
+  width: 50%;
+  min-width: 430px;
+  background: linear-gradient(to bottom, rgba(20, 79, 132, 0.3), rgba(135, 46, 123, 0.8)), url(../img/peak.jpg) no-repeat center;
+  background-size: cover;
+  color: white;
+  text-align: center;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  padding: 20px;
+}
+
+.image-container .title {
+  font-size: 2em;
+  font-weight: 900;
+}
+
+.image-container .footer {
+  font-style: italic;
+  padding-top: 450px;
+}
+
+.form-container {
+  width: 50%;
+  min-width: 430px;
+  border: 4px solid #892064;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  padding: 20px;
+  margin: auto;
+}
+
+.form-container i.fa {
+  display: block;
+  color: #892064;
+  text-align: right;
+}
+
+.form-container form {
+  width: 70%;
+  margin: auto;
+}
+
+.form-container form div {
+  padding: 25px;
+}
+
+.form-container form .input-container label {
+  color: #d3d5df;
+  text-transform: uppercase;
+}
+
+.form-container form .input-container input {
+  width: 100%;
+  color: #708090;
+  font-size: 1em;
+  border: none;
+  border-bottom: 2px solid #708090;
+  outline: none;
+  padding: 5px 0;
+}
+
+.form-container form .input-container input::placeholder {
+  text-transform: capitalize;
+}
+
+.form-container form .buttons-container .button {
+  background-color: #892064;
+  color: white;
+  font-size: 0.8em;
+  font-weight: bold;
+  border-radius: 25px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 10px 20px;
+}
+
+.form-container form .buttons-container .link {
+  color: #892064;
+  font-weight: bold;
+}
+/*# sourceMappingURL=style.css.map */

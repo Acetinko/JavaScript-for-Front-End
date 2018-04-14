@@ -155,16 +155,18 @@ header {
     background-size: cover;
     .clients-content {
         height: 100%;
-        width: 40%;
-        min-width: 550px;
-        max-width: 600px;
-        background: #28323d;
-        opacity: 0.8;
+        // width: 40%;
+        // min-width: 550px;
+        // max-width: 600px;
+        width: 600px;
+        // background: #28323d;
+        // opacity: 0.8;
+        background: rgba(40, 50, 60, 0.8); /**/
         color: white;
         border: 4px solid $color-orange;
         text-align: center;
         padding: 30px;
-        margin-left: 150px;
+        margin-left: 100px;
         .clients-title,
         .clients-subtitle {
             margin: 50px;
@@ -172,7 +174,7 @@ header {
         }
         .clients-title {
             font-size: 1.5em;
-            font-weight: 900;
+            font-weight: 600;
         }
         .clients-subtitle {
             font-size: smaller;
@@ -210,13 +212,15 @@ footer {
     @include display-flex-between();
     align-items: center;
     background-color: #04040e;
-    color: white;
     padding: 20px;
-    p > a {
-        text-decoration: none;
-        strong {
-            @include color-pumpkin();
-            text-transform: uppercase;
+    p {
+        color: white;
+        a {
+            text-decoration: none;
+            strong {
+                @include color-pumpkin();
+                text-transform: uppercase;
+            }
         }
     }
     ul {

@@ -34,7 +34,6 @@ header.header-primary ul li a:hover {
 
 .product {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-around;
   color: #5a5a5a;
   padding: 40px;

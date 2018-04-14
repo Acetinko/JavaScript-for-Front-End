@@ -123,28 +123,25 @@ header .header-content-container .header-buttons .button.pink {
 
 .clients-container .clients-content {
   height: 100%;
-  width: 40%;
-  min-width: 550px;
-  max-width: 600px;
-  background: #28323d;
-  opacity: 0.8;
+  width: 600px;
+  background: rgba(40, 50, 60, 0.8);
+  /**/
   color: white;
   border: 4px solid #c17f3f;
   text-align: center;
   padding: 30px;
-  margin-left: 150px;
+  margin-left: 100px;
 }
 
 .clients-container .clients-content .clients-title,
 .clients-container .clients-content .clients-subtitle {
   margin: 50px;
-  font-weight: bold;
   font-style: italic;
 }
 
 .clients-container .clients-content .clients-title {
   font-size: 1.5em;
-  font-weight: 900;
+  font-weight: 600;
 }
 
 .clients-container .clients-content .clients-subtitle {
@@ -184,15 +181,18 @@ footer {
   justify-content: space-between;
   align-items: center;
   background-color: #04040e;
-  color: white;
   padding: 20px;
 }
 
-footer p > a {
+footer p {
+  color: white;
+}
+
+footer p a {
   text-decoration: none;
 }
 
-footer p > a strong {
+footer p a strong {
   color: #c17f3f;
   text-transform: uppercase;
 }
