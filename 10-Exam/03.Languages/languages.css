@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+body{
+    font-family: 'Roboto', sans-serif;;
+}
+article{
+    background: lightgray;
+    padding: 20px;
+    border-bottom: 2px solid black;
+}
+.languages{
+    padding-top: 10px;
+}
+.top{
+    background:lightgoldenrodyellow;
+    padding: 10px;
+}
+#heading{
+    font-size: 56px;
+    color:blue;
+}
+article:last-of-type
+{
+    border:none;
+}
+article>div{
+    display: flex;
+}
+article p{
+    font-size:22px;
+    word-spacing: 4px;
+}
+
+h1{
+    text-align: center;
+    font-size:40px;
+}
+.js-logo{
+    width: 750px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+.csharp-container{
+    padding: 20px;
+}
+.csharp-container p{
+    word-spacing: 7px;
+}
+.csharp-container img{
+    width: 700px;
+    height: 530px;
+    border-radius: 40%;
+    margin-left: 25px;
+}
+.java-container img{
+    width: 400px;
+    height: 400px;
+}
+h2.article-header{
+    font-size: 44px;
+    font-style: italic;
+    text-align: center;
+}
+.java-container img{
+    margin-right: 25px;
+}
